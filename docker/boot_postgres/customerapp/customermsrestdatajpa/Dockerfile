@@ -1,14 +1,13 @@
-FROM openjdk:18.0.2-jdk
-
+FROM adoptopenjdk:16-jre
 # Copy local code to the container image.
 #WORKDIR /app
 
 
 
-COPY  target/customermsrestdatajpa-*.jar /demo.jar
+COPY customermsrestdatajpa-*.jar /app.jar
 
 
 
 # Run the web service on container startup.
- CMD  java -jar /demo.jar
+ CMD  java -jar /app.jar
 
